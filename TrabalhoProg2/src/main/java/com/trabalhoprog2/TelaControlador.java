@@ -63,7 +63,7 @@ public class TelaControlador {
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colunaTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
 
-        // Cidade e Estado vêm de Endereco → precisamos de lambda
+        // Cidade e Estado vêm de Endereco
         colunaCidade.setCellValueFactory(cellData ->
                 new javafx.beans.property.SimpleStringProperty(cellData.getValue().getEndereco().getCidade()));
         colunaEstado.setCellValueFactory(cellData ->
@@ -132,4 +132,5 @@ public class TelaControlador {
         alert.setContentText(mensagem);
         alert.showAndWait();
     }
+
 }
